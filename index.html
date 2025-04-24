@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Tu Nombre</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+  <div class="container py-5">
+    <!-- Terminal de bienvenida -->
+    <div class="terminal mb-5">
+      <div class="typing-text" id="terminalText"></div><span class="cursor">|</span>
+    </div>
+
+    <!-- Sobre mí -->
+    <section class="mb-5">
+      <h2>&gt; Sobre mí</h2>
+      <p>Me encanta aprender nuevas tecnologías, crear soluciones útiles y seguir creciendo como desarrollador. Este portafolio es una muestra de mi progreso y dedicación.</p>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="mb-5">
+      <h2>&gt; Proyectos</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <h5>Proyecto 1</h5>
+            <p>Descripción breve del proyecto.</p>
+            <a href="#" target="_blank">Ver más</a>
+          </div>
+        </div>
+        <!-- Agrega más tarjetas aquí -->
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="mb-5">
+      <h2>&gt; Habilidades</h2>
+      <p>HTML · CSS · JavaScript · Bootstrap</p>
+    </section>
+
+    <!-- Nueva sección -->
+    <section class="mb-5">
+      <h2>&gt; ¿Qué estoy aprendiendo?</h2>
+      <p>Actualmente estoy profundizando en el uso de JavaScript, trabajando con proyectos personales para mejorar mis habilidades y explorando nuevas tecnologías como React y Git.</p>
+    </section>
+  </div>
+
+  <script>
+    const text = "> Hola, soy Andres Portilla\nDesarrollador Junior.\nCargando ...";
+    const terminalText = document.getElementById("terminalText");
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        terminalText.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 40);
+      }
+    }
+
+    window.addEventListener("load", type);
+  </script>
+</body>
+
+</html>
